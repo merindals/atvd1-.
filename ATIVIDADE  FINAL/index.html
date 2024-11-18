@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gerenciamento de Veículos</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Sistema de Gerenciamento de Veículos</h1>
+    <div class="user-info">
+        <select id="userSelector" class="form-control">
+            <!-- Will be populated with users -->
+        </select>
+        <span id="currentUserName"></span>
+        <span id="currentUserRole" class="role-badge"></span>
+    </div>
+    <!-- Adicionei o botão de Login -->
+    <a href="login.html" class="btn btn-primary">Login</a>
+</nav>
+
+  <div class="container">
+    <nav class="navbar">
+      <h1>Sistema de Gerenciamento de Veículos</h1>
+      <div class="user-info">
+        <select id="userSelector" class="form-control">
+          <!-- Will be populated with users -->
+        </select>
+        <span id="currentUserName"></span>
+        <span id="currentUserRole" class="role-badge"></span>
+      </div>
+    </nav>
+  
+    <div class="content">
+      <nav class="top-menu">
+        <div class="menu-tabs">
+          <div class="tab active" data-tab="vehicles">Veículos</div>
+          <div class="tab" data-tab="team">Equipe</div>
+        </div>
+  
+        <div id="vehiclesMenu" class="menu-section">
+          <ul>
+            <li><a href="#" onclick="vehicleManager.showSection('cadastro'); return false;">Cadastro </a></li>
+            <li><a href="#" onclick="vehicleManager.showSection('listagem'); return false;">Listagem </a></li>
+          </ul>
+        </div>
+  
+        <div id="teamMenu" class="menu-section" style="display: none;">
+          <h3>Membros da Equipe</h3>
+          <div id="teamList" class="team-members">
+          </div>
+        </div>
+      </nav>
+  
+      <main class="main">
+        <section id="cadastro" style="display: none;">
+          <h2>Cadastro de Veículo</h2>
+          <form id="vehicleForm">
+            <div class="form-group">
+              <label for="marca">Marca</label>
+              <input type="text" id="marca" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="modelo">Modelo</label>
+              <input type="text" id="modelo" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="ano">Ano</label>
+              <input type="number" id="ano" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="cor">Cor</label>
+              <input type="text" id="cor" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="registro">Número de Registro</label>
+              <input type="text" id="registro" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar Veículo</button>
+          </form>
+        </section>
+  
+        <section id="listagem" style="display: none;">
+          <h2>Veículos Cadastrados</h2>
+          <div class="filter-form"></div>
+          <ul class="vehicle-list" id="vehicleList">
+          </ul>
+        </section>
+  
+      </main>
+    </div>
+  </div>
+    <script src="js.js">t</script>
+</body>
+</html>

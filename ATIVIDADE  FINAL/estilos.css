@@ -1,0 +1,251 @@
+
+:root {
+  --secondary: #f113f1;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --warning: #f1c40f;
+}
+
+body {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://wallpapers.com/images/hd/lamborghini-aventador-s-black-sports-cars-lgdptgctfyap8en6.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar { 
+  background: var(--primary);
+  padding: 12px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   background-color: rgba(41, 30, 30, 0.7);  
+
+}
+
+.user-info select {
+  padding: 0.25rem;
+  margin-right: 1rem;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid var(--light);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+.top-menu {
+  background-color: rgba(0, 0, 0, 0.7);  
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.menu-tabs {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu-section {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu-section ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-section a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.menu-section a:hover {
+  color: var(--secondary);
+}
+
+.main {
+  background-color: rgb(0, 0, 0,0.7);  ;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--secondary);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.btn-warning {
+  background: var(--warning);
+  color: black;
+}
+
+.vehicle-list {
+  list-style: none;
+  padding: 0;
+}
+
+.vehicle-item {
+  padding: 1rem;
+  border: 1px solid #fafafa;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.comments {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  margin-right: 0.5rem;
+}
+
+.role-admin {
+  background: var(--secondary);
+  color: white;
+}
+
+.role-operator {
+  background: var(--success);
+  color: white;
+}
+
+.role-consultant {
+  background: var(--warning);
+  color: black;
+}
+
+.team-members {
+  margin-top: 2rem;
+}
+
+.member-card {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.history-log {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.comment-form {
+  margin-top: 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.alert-success {
+  background: var(--success);
+  color: white;
+}
+
+.alert-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

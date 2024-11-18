@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" placeholder="Nome" name="nome" id="nome" required>
+            <br><br>
+            <input type="password" placeholder="Senha" name="senha" id="senha" required>
+            <br><br>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="error-message" style="color: red; display: none;"></p>
+    </div>
+
+    <script>
+        function validarFormulario(nome, senha) {
+            if (!nome || !senha) {
+                return "Todos os campos são obrigatórios.";
+            }
+            if (nome !== "admin" || senha !== "1234") {
+                return "Nome ou senha inválidos.";
+            }
+            return null;
+        }
+    
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
